@@ -6,7 +6,7 @@ MAINTAINER Matt Espe
 #Update
 RUN apt-get update
 
-#Install pdfto*
+#Install pdfto
 RUN apt-get install -y poppler-utils zlib1g-dev libxml2-dev
 
 #Install packages
