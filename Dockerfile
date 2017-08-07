@@ -14,8 +14,10 @@ RUN git clone https://github.com/dsidavis/pdftohtml.git \
 	&& make \
 	&& cp src/pdftohtml /usr/bin/
 	
-# Avoid using devtools - takes a while to install
-RUN Rscript -e 'install.packages("XML")'
+# Avoid using devtools - takes a while to instal
+RUN git clone https://github.com/omegahat/XML.git \
+	&& cd XML \
+	&& R CMD INSTALL .
 
 RUN git clone https://github.com/dsidavis/ReadPDF.git \
 	&& cd ReadPDF \
