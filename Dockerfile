@@ -1,12 +1,12 @@
-# Start with Rstudio base
+#Start with Rstudio base
 FROM rocker/rstudio
 
 MAINTAINER Matt Espe
 
-# Update
+#Update
 RUN apt-get update
 
-# Install pdfto*
+#Install pdfto
 RUN apt-get install -y poppler-utils zlib1g-dev libxml2-dev
 
 RUN git clone https://github.com/dsidavis/pdftohtml.git \
